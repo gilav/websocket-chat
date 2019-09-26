@@ -1,0 +1,13 @@
+A chat build using NodeJs
+
+This is an upgrade of a nodejs chat created by Nikolay Anastasov, taken from: https://tutorialzine.com/2014/03/nodejs-private-webchat
+
+My modifications are:
+- Allow  multiple peoples per room
+- typescrypt it
+- try to implement a video chat session, using WebRTC demonstrator at https://appr.tc/r/
+
+
+
+
+
