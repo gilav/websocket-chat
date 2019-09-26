@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@udes/shelljs-nodecli": "^0.2.3",
-    "ejs": "^1.0.0",
+    "ejs": ">=2.5.5",
     "express": "^4.17.1",
     "gravatar": "^1.0.6",
     "nodemon": "^1.19.1",
