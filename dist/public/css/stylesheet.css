@@ -1,0 +1,896 @@
+/*------------- Reset browser differences ------------- */
+
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+/*  GL */
+.flexme{
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    }
+/*  GL */
+	
+
+
+/* ------------ Body styles ------------ */
+
+
+body {
+	background-color: #f0f1f3;
+	color:#667073;
+	font: 16px/1.3 'Arial',sans-serif;
+}
+
+
+
+
+/* ------------ Header styles ------------ */
+
+
+
+/* ------ Home ------ */
+.homebanner {
+	height: 60px;
+	background-color: #3c4446;
+}
+
+.homebannertext {
+	text-align:center;
+	padding-top: 15px;
+	font-family: 'Open Sans Condensed',serif;
+	font-weight: bold;
+	color:white;
+}
+.homebannertext span {
+	color: #d6441b;
+}
+
+#logo {
+	text-decoration: none;
+	color:white;
+}
+#logo:visited {
+	color: white;
+}
+
+
+/* ------ users_online ----- */
+#users_online {
+	position: fixed;
+	line-height: 0.5;
+	top: 0px;
+	left: 0px;
+	margin: 0px 0px 0px 5px;
+	text-decoration: none;
+	color: white;
+	font-family: 'Open Sans Condensed',serif;
+	font-size: 14px;
+}
+
+#video_capable {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	margin: 0px 0px 0px 0px;
+	display: flex;
+    flex-direction: row;
+	font-family: 'Open Sans Condensed',serif;
+	color: white;
+};
+
+#noAvSpan {
+	margin: 0px 0px 0px 0px;
+};
+
+.flex-list {
+    position: relative;
+    margin: 1em;
+    overflow: hidden;
+}
+.flex-list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -1px;
+}
+.flex-list li {
+	list-style-type: none;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: .25em 0;
+    padding: 0 1em;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    /*background-color: #fff;*/
+}
+
+
+
+/* ------ Invite ------ */
+.banner {
+	position:fixed;
+	height: 55px;
+	left: 0px; 
+	right: 0px;
+	background-color: #3c4446;
+}
+
+.bannertext {
+	text-align:center;
+	padding-top: 15px;
+	font-family: 'Open Sans Condensed',serif;
+	font-weight: bold;
+	color:white;
+	font-size:25px;
+}
+.bannertext span {
+	color: #d6441b;
+}
+
+
+/* ------------ Section styles ------------ */
+#avScreen {
+	display:block;
+	position:fixed;
+	top:65px;
+	left:10px;
+	width:500px;
+	height:300px;
+	text-align:center;
+	background-color: #9cd3ec;
+	border-radius: 8px;
+}
+#avText{
+	margin: auto;
+	width: 90%;
+	height:24px !important;
+	background-color: #4c39f3;
+}
+#avVideo{
+	margin: 5px 5px 15px 18%;
+	width:400px !important;
+	height:225px !important;
+	background-color: #ffffff;
+}
+#avControl{
+	display: flex;
+    flex-direction: column;
+	margin: -200px 5px;
+	width: 15%;
+	height: 70%;
+	background-color: #9cd3ec;
+}
+#avMessage{
+	margin: 185px 15px;
+	width: 95%;
+	height:24px !important;
+	background-color: #ffffff;
+}
+
+
+/* ------------ Section styles ------------ */
+.section {
+	text-align:center;
+	padding-top: 65px;
+
+    margin: auto;
+}
+
+
+/* ------ Home ------ */
+.homesection {
+	text-align:center;
+	padding-top: 65px;
+	
+    position: relative;
+
+    margin: auto;
+}
+
+.node {
+	padding-top: 20px;
+	text-align:center;
+	margin-bottom:20px;
+}
+.node #chat {
+	font-family: 'Open Sans Condensed';
+	font-weight: normal;
+	color: #707368;
+}
+
+#nodelogo {
+	width: 200px;
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+#create {
+	width: 300px;
+	height: 80px;
+	background-color: #70b1d1;
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	border-radius: 3px;
+	box-shadow: 0px 5px 5px #e4e8e7;
+	text-decoration: none;
+	margin-bottom: 20px;
+	color: #eeffff;
+}
+#create:visited {
+	color: #eeffff;
+	text-decoration: none;
+}
+#createbutton {
+	padding-top: 18px;
+}
+#little {
+	font-weight: normal;
+	font-size: 13px;
+}
+#big {
+	font-weight: bold;
+	font-size: 23px;
+}
+.tutorial{
+	margin-bottom:90px;
+}
+#tutorial {
+	color: #88bfd4;
+}
+#tutorial:visited {
+	color: #88bfd4;
+}
+
+
+
+/* ------ Connected: ask people login name and email adress ------*/
+.connected {
+	display: block;
+}
+.connected h2 {
+	padding-top: 5px;
+}
+.infoConnected {
+	text-align: left;
+	float: right;
+	margin: 20px 170px 0 0;
+}
+#connectedVisual{
+	margin:auto; background-color: #ffffff; border-radius: 3px; box-shadow:0px 3px 3px #e3e4e6; color: #637277;
+}
+#creatorImage {
+	float: left;
+	margin: 80px 10px 10px 80px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+#yourName {
+	float:left;
+	padding-left:10px;
+	width: 150px;
+	height: 30px;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	background-color: #f0f1f3;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	margin-bottom:20px;
+	overflow: hidden;
+}
+
+#yourEmail {
+	float:left;
+	padding-left: 10px;
+	width: 200px;
+	height: 30px;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	background-color: #f0f1f3;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	margin-bottom:20px;
+}
+
+#yourEnter {
+	float:left;
+	width: 110px;
+	height: 40px;
+	text-align:center;
+	background-color: #73b4d4;
+	border: none;
+	box-shadow: 3px 3px 3px #efedee;
+	border-radius: 2px;
+	color:white;
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+
+
+/* ------ Person Inside ------*/
+#connectedVisual{
+	margin:auto; background-color: #ffffff; border-radius: 3px; box-shadow:0px 3px 3px #e3e4e6; color: #637277;
+}
+.personInside {
+	display: block;
+}
+.personInside h4 {
+	padding-top: 5px;
+	width: 210px;
+	overflow: hidden;
+}
+.personInside h5 {
+	padding-top: 5px;
+	width: 210px;
+	overflow: hidden;
+}
+
+.infoInside {
+	text-align: left;
+	float: right;
+	margin: 20px 170px 0 0;
+}
+
+#ownerImage {
+	float: left;
+	margin: 80px 10px 10px 80px;
+	width: 100px;
+	height: 100px;
+	border-radius: 2px;
+}
+
+#hisName {
+	float:left;
+	padding-left:10px;
+	width: 150px;
+	height: 30px;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	background-color: #f0f1f3;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	margin-bottom:20px;
+}
+
+#hisEmail {
+	float:left;
+	padding-left: 10px;
+	width: 200px;
+	height: 30px;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	background-color: #f0f1f3;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	margin-bottom:20px;
+}
+
+#hisEnter {
+	float:left;
+	width: 110px;
+	height: 40px;
+	text-align:center;
+	background-color: #73b4d4;
+	border: none;
+	box-shadow: 3px 3px 3px #efedee;
+	border-radius: 2px;
+	color:white;
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+
+/* ------ Invite ------ */
+.inviteSomebody{
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	width: 500px;
+	/*height: 200px;*/
+	background-color: #ffffff;
+	border-radius: 6px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	color: #637277;
+}
+.inviteSomebody h4 {
+	padding-top: 40px;
+}
+.inviteSomebody h5 {
+	 font-weight: normal;
+	 margin: 10px 0 20px;
+ }
+.inviteSomebody .link {
+	width: 500px;
+	height: 35px;
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	padding-top: 5px;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	background-color: #f0f1f3;
+}
+.inviteSomebody #link{
+	text-decoration: none;
+	color: #637277;
+}
+
+
+/* ------ Left ------*/
+.left {
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	width: 600px;
+	height: 200px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	color: #637277;
+	margin-bottom: 400px;
+}
+.left h2 {
+	padding-top: 50px;
+	padding-bottom: 6px;
+}
+.left h5 {
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.left .link {
+	width: 400px;
+	height: 35px;
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	padding-top: 15px;
+	margin-bottom:40px;
+	border-radius: 4px;
+	background-color: #f0f1f3;
+}
+.left #link{
+	text-decoration: none;
+	color: #637277;
+}
+#leftImage {
+	float: left;
+	margin: 40px 10px 10px 20px;
+	width: 100px;
+	height: 100px;
+	border-radius: 2px;
+}
+.nickname-left {
+	width: 40px;
+	overflow: hidden;
+}
+
+/* ------join------ */
+.join {
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	width: 600px;
+	height: 200px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	color: #637277;
+	margin-bottom: 400px;
+}
+.join h2 {
+	padding-top: 50px;
+	padding-bottom: 6px;
+}
+.join h5 {
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.join .link {
+	width: 400px;
+	height: 35px;
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	padding-top: 15px;
+	margin-bottom:40px;
+	border-radius: 4px;
+	background-color: #f0f1f3;
+}
+.join #link{
+	text-decoration: none;
+	color: #637277;
+}
+#joinImage {
+	float: left;
+	margin: 40px 10px 10px 20px;
+	width: 100px;
+	height: 100px;
+	border-radius: 2px;
+}
+.nickname-join {
+	width: 40px;
+	overflow: hidden;
+}
+
+
+/* ------ Too many People ------*/
+.tooManyPeople {
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	width: 750px;
+	height: 300px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	color: #637277;
+}
+.tooManyPeople h4 {
+	padding-top: 100px;
+	padding-bottom: 8px;
+}
+.tooManyPeople h5 {
+	font-weight: normal;
+	margin-bottom: 100px;
+}
+
+#room:visited {
+	color: #88bfd4;
+}
+
+
+
+/* ------ No Messages ------ */
+.nomessages {
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	width: 600px;
+	height: 200px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	box-shadow:0px 3px 3px #e3e4e6;
+	color: #637277;
+	margin-bottom: 600px;
+}
+.nomessages h2 {
+	padding-top: 50px;
+	overflow: hidden;
+	padding-bottom: 6px;
+}
+.nomessages h5 {
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+#noMessagesImage {
+	float: left;
+	margin: 40px 10px 10px 20px;
+	width: 100px;
+	height: 100px;
+	border-radius: 2px;
+}
+
+#img {
+	float: left;
+	margin: 90px 0 0 140px;
+	width: 100px;
+	height: 100px;
+	border-radius: 2px;
+}
+.info {
+	text-align: left;
+	float: right;
+	margin: 10px 60px 0 0;
+	width: 405px;
+	overflow: hidden;
+}
+.nickname-chat {
+	overflow: hidden;
+}
+
+
+
+/* ------ Chat Screen ------ */
+.image {
+	clear:both;
+	float:left;
+	height: 160px;
+	width: 80px;
+	text-align:center;
+	overflow: hidden;
+}
+
+.image img {
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-radius: 2px;
+}
+
+.body {
+	text-align:center;
+	width: 40%;
+	display: block;
+	margin:0px auto 650px;
+	background-color: #ffffff;
+	color: #637277;
+}
+
+.chats {
+	list-style-type: none;
+	margin-top:10px;
+}
+
+
+.me {
+	clear:both;
+	float:left;
+	margin-bottom:10px;
+}
+
+.you {
+	clear:both;
+	float:right;
+	margin-bottom:10px;
+}
+
+.you .image{
+	float:right;
+}
+
+.chats .me p {
+	text-align:left;
+	float: left;
+	display: inline-block;
+	margin-left: 20px;
+	margin-bottom:30px;
+	padding: 25px 34px;
+	min-width: 160px;
+	min-height: 10px;
+	max-width: 510px;
+	border-radius: 16px;
+	box-shadow: 0px 3px 3px #E3E4E6;
+	color: #637277;
+	background-color: #e2e2e2;
+	line-height: 1.4;
+	word-wrap: break-word;
+}
+
+.chats .you p {
+	text-align:left;
+	float: left;
+	display: inline-block;
+	margin-right:20px;
+	margin-bottom:30px;
+	padding: 25px 34px;
+	min-width: 160px;
+	min-height: 10px;
+	max-width: 510px;
+	border-radius: 16px;
+	box-shadow: 0px 3px 3px #E3E4E6;
+	color: #637277;
+	background-color: #e2e2e2;
+	line-height: 1.4;
+	word-wrap: break-word;
+}
+
+.image b {
+	overflow: hidden;
+	display: block;
+	clear: both;
+	padding-top: 7px;
+}
+
+.image i{
+	font-size: 12px;
+	line-height: 1.2;
+	display: block;
+	/*- opacity: 0.8; -*/
+	padding-top: 4px;
+}
+
+
+/* ------------ Footer styles ------------ */
+footer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	padding-top: 10px;
+	background-color: #d0d0d0;
+	height: 100px;
+}
+#chatform {
+	width:500px;
+	margin: 0 auto;
+	background-color: white;
+}
+
+#messageInput {
+	height: 80px;
+	display: block;
+	float:left;
+	margin: 0 auto;
+	background-color: white;
+	border: 1px solid #cccccc;
+	padding-left: 2px;
+	padding-top: 2px;
+	resize: none;
+	font:inherit;
+	color:inherit;
+	height: 80px;
+	float:left;
+}
+
+#controlButtons {
+	margin: 0 auto;
+	background-color: #d0d0d0;
+	border: 1px solid #cccccc;
+	padding-left: 2px;
+	padding-top: 2px;
+	resize: none;
+	font:inherit;
+	color:inherit;
+	float:right;
+	height: 80px;
+	display: block;
+}
+
+#submit {
+	height: 34px;
+	margin-top: 2px;
+	padding-left: 5px;
+	float:right;
+	text-align:center;
+	background-color: #73b4d4;
+	border: none;
+	box-shadow: 3px 3px 3px #efedee;
+	border-radius: 6px;
+	color:white;
+	font-weight: bold;
+	font-size: 17px;
+	outline: none;
+	cursor:pointer;
+}
+
+#clear {
+	height: 34px;
+	margin-top: 2px;
+	padding-left: 5px;
+	float:right;
+	text-align:center;
+	background-color: #73b4d4;
+	border: none;
+	box-shadow: 3px 3px 3px #efedee;
+	border-radius: 6px;
+	color:white;
+	font-weight: bold;
+	font-size: 17px;
+	outline: none;
+	cursor:pointer;
+}
+
+
+
+
+/* ---------------------- HIDE -------------------------- */
+.connected {
+	display: none;
+}
+
+.personInside {
+	display:none;
+}
+
+.inviteSomebody {
+	display:none;
+}
+
+.left {
+	display:none;
+}
+
+.join {
+	display:none;
+}
+
+.tooManyPeople {
+	display:none;
+}
+
+.nomessages{
+	display:none;
+}
+
+#avScreen {
+	display:none;
+}
+
+
+.chatScreen{
+	display:none;
+	width:700px;
+	margin: 0 auto 200px;
+	overflow:hidden;
+}
+
+#footer {
+	display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+//
+//
+//
+*/
+#snackbar {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	border-radius: 6px;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	left: 50%;
+	bottom: 80px;
+	font-size: 17px;
+	z-index: 1000;
+  }
+  
+  #snackbar.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+	from {bottom: 0; opacity: 0;} 
+	to {bottom: 80px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 80px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+	from {bottom: 80px; opacity: 1;} 
+	to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+	from {bottom: 80px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }

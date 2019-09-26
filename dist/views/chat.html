@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<!--
+	This file is rendered by express.js, when the url /chat/123456 is visited in a browser.
+	It includes jQuery, socket.io.js (it is automatically served by the socket.io library), 
+	and a few more JavaScript files that you should check out.
+-->
+
+<html>
+
+<head>
+
+	<title>Private chat room</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="/css/stylesheet.css" />
+	<link rel="stylesheet" rel="stylesheet" href="/css/bootstrap.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans Condensed:300italic,300,700" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+	<div class="banner">
+		<h1 class="bannertext">
+		   Chat room
+		</h1>
+		<div id="users_online" class="flex-list">
+			<h5>Online: </h5>
+			<ul id="users_list">
+				<li>nobody</li>
+			</ul>
+		</div>
+		<div id="video_capable">
+			<img src="/img/noVideoChat.png" width="50" height="50" title="AV capable?" id="avIcon">
+			<div id="noAvSpan">Disable AV: <input type="checkbox" name="noVideoChat" value="noVideoChat"  onclick="onChangeAvCheckbox(this)"></div>
+		</div>
+	</div>
+
+	<div id="avScreen">
+		<h4 class="avText">
+			Video
+		</h4>
+		<div id="avVideo">
+			<img src="/img/white-noise-1.gif" width="400" height="225" id="videoImg" title="nobody"/>
+		</div>
+		<div id="avControl">
+			<img src="/img/answer_round_2.png" id="answerImg" onclick="answer(this)"/>
+			<img src="/img/decline_round_2.png" id="declineImg" onclick="decline(this)"/>
+		</div>
+		<div id="avMessage">
+			the message
+		</div>
+	</div>
+
+	<section class="section">
+
+		<!-- These elements are displayed as white info cards in the middle of the screen -->
+		<div class="connected">
+			<div class = 'flexme' style = 'position:absolute; top:0; bottom:0; right:0; left:0; '>
+				<div id="connectedVisual">
+					<img src="/img/unnamed.jpg" id="creatorImage" />
+
+					<div class="infoConnected">
+						<h2>Who are you?</h2>
+						<br/>
+
+						<form class="loginForm">
+							<input type="text" id="yourName" placeholder="Your nick name" /><br/>
+							<input type="text" id="yourEmail" placeholder="Your email address" /><br/>
+							<input type="submit" id="yourEnter" value="ENTER" />
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="personInside">
+			<div class = 'flexme' style = 'position:absolute; top:0; bottom:0; right:0; left:0; '>
+				<div id="connectedVisual">
+					<img src="/img/unnamed.jpg" id="ownerImage" />
+
+					<div class="infoInside">
+						<h4>Chat with <span class="nickname-chat"></span></h4>
+						<h5>Who are you?</h5>
+
+						<form class="loginForm">
+							<input type="text" id="hisName" placeholder="Your nick name" /><br/>
+							<input type="text" id="hisEmail" placeholder="Your email address" /><br/>
+							<input type="submit" id="hisEnter" value="CHAT" />
+						</form>
+
+					</div>
+				</div>
+`			</div>
+		</div>
+
+		<div class="inviteSomebody">
+
+			<h4>Oops, there are no other people in this chat!</h4>
+			<h5>Invite a friend by sending him this URL:</h5>
+
+			<div class="link">
+				<a title="Invite a friend" href="" id="link"></a>
+			</div>
+
+		</div>
+		
+		<div class="tooManyPeople">
+
+			<h4>Oops, you can not join this chat!</h4>
+			<h5>There are already two people in it. Would you like to create a <a title="New Room" href="/create" id="room">new room</a>?</h5>
+
+		</div>
+
+		<div class="chatScreen">
+
+			<ul class="chats">
+				<!-- The chat messages will go here -->
+			</ul>
+
+		</div>
+
+	</section>
+
+	<footer id="footer">
+		<form id="chatform" class="row">
+				<textarea id="messageInput" class="col-10" placeholder="Write something..."></textarea>
+				<div id="controlButtons" class="col-2">
+					<input type="submit" id="submit" class="btn btn-outline-primary mx-auto" name="Send" value="Send"/><br>
+					<input type="submit" id="clear" class="btn btn-outline-primary mx-auto" name="Clear" value="Clear"/>
+			</div>
+		</form>
+	</footer>
+
+	<div id="snackbar">some text</div>
+
+	<script src="/js/moment.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="/js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="/js/notify.min.js"></script>
+	<script src="/js/chat.js"></script>
+
+</body>
+
+</html>

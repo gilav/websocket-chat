@@ -1,0 +1,43 @@
+{
+  "name": "Node-Chat",
+  "version": "0.0.1",
+  "description": "Realtime chat",
+  "main": "./dist/server",
+  "author": {
+    "name": "Nikolay Anastasov; Lavaux Gilles"
+  },
+  "scripts": {
+    "dev": "nodemon --watch './src/**/*.ts' --exec ts-node ./src/server.ts",
+    "serve": "node dist/server.js",
+    "copy-static-assets": "ts-node copyStaticAssets.ts",
+    "build": "tsc --build && npm run copy-static-assets",
+    "clean": "tsc --build --clean",
+    "format": "prettier --write \"src/**/*.ts\"  \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "keywords": [
+    "node",
+    "chat"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^8.10.53",
+    "prettier": "^1.18.2",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@udes/shelljs-nodecli": "^0.2.3",
+    "ejs": "^1.0.0",
+    "express": "^4.17.1",
+    "gravatar": "^1.0.6",
+    "nodemon": "^1.19.1",
+    "shelljs": "^0.8.3",
+    "socket.io": "^2.2.0",
+    "ts-node": "^8.3.0"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
